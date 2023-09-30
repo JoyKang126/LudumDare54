@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Memory : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class Memory : MonoBehaviour
     public delegate void DragEndedDelegate(Memory mem);
     public DragEndedDelegate dragEndedCallback;
 
-    public string memId;
+    [SerializeField] private TMP_Text description;
+
+    public string memID;
+    public string memDesc;
     private bool isDragged = false;
     private bool clicked;
     private Vector3 mouseDragStartPosition;
@@ -26,6 +30,7 @@ public class Memory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //delete button
         if(clicked)
         {
             transform.GetChild(0).gameObject.SetActive(true);
@@ -34,6 +39,8 @@ public class Memory : MonoBehaviour
         {
             transform.GetChild(0).gameObject.SetActive(false);
         }
+
+        description.text = memDesc;
     }
 
     private void OnMouseDown()

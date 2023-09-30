@@ -55,9 +55,19 @@ public class SnapController : MonoBehaviour
 
     }
 
+    public void addDraggable(Memory mem)
+    {
+        mem.dragEndedCallback = OnDragEnded;
+        draggableObjects.Add(mem);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        foreach (Memory mem in draggableObjects)
+        {
+            if (mem == null)
+                draggableObjects.Remove(mem);
+        }
     }
 }

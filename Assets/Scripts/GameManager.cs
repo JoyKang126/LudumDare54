@@ -1,16 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float socialmeter;
     [SerializeField] private float academicsmeter;
     [SerializeField] private float happiness;
-        
-    private float timer = 10;
+    [SerializeField] private LevelInfo levelInfo;
+    [SerializeField] private SnapController snapControl;
+    [SerializeField] public List<MemoryBlock> queueSpaces;
+    [SerializeField] public List<MemoryBlock> memSpaces;
+    //[SerializeField] public TMP_Text statusField;
+    
+    private float timer = 7;
     //private gameObject heldMem;
     public bool isHolding;
+    public GameObject memPrefab;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,17 +33,63 @@ public class GameManager : MonoBehaviour
         if (timer > 0)
         {
             timer -= Time.deltaTime;
+            Debug.Log(timer);
         }
         else
         {
-            timer = 10;
+            //spawn new memory
+            MemoryInfo nextmem = levelInfo.getNextMemory();
+            if (nextmem != null)
+            {
+                //find first available queue space
+                Vector3 pos = new Vector3(0,0,0);
+                MemoryBlock selected = null;
+                foreach (MemoryBlock queue in queueSpaces)
+                {
+                    if (!queue.isOccupied)
+                    {
+                        pos = queue.transform.position;
+                        queue.isOccupied = true;
+                        selected = queue;
+                        break;
+                    }
+                        
+                }
+                if (selected != null)
+                {
+                    //create a new memory block at the spot found above
+                    GameObject mem = Instantiate (memPrefab, pos, Quaternion.identity);
+                    mem.GetComponent<Memory>().snappedTo = selected;
+                    mem.GetComponent<Memory>().memID = nextmem.memID;
+                    mem.GetComponent<Memory>().memDesc = nextmem.memDescription;
+                    mem.SetActive(true);
+                    snapControl.addDraggable(mem.GetComponent<Memory>());
+                }
+                else
+                {
+                    //queue is full
+                    //trigger end game state
+                }
+                
+            }
+            
+            timer = 7;
         }
 
     }
 
-    private void holdMemory(Memory mem)
+    public void updateSocials(float change)
     {
-        //heldMem = mem;
-        //isHolding = true;
+        socialmeter += change;
     }
+
+    public void updateAcademics(float change)
+    {
+        academicsmeter += change;
+    }
+
+    // public void updateStatusField(string content)
+    // {
+    //     statusField.text = content;
+    // }
 }
