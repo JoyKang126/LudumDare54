@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class DeleteButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnMouseDown()
     {
         if (transform.parent.gameObject.GetComponent<Memory>().snappedTo != null)

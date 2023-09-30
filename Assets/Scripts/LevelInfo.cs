@@ -4,30 +4,20 @@ using UnityEngine;
 
 public class LevelInfo : MonoBehaviour
 {
-    public List<string> memoryList = new List<string>();
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<MemoryInfo> memoryList = new List<MemoryInfo>();
 
-    // Update is called once per frame
-    void Update()
+    public MemoryInfo getNextMemory()
     {
-        
-    }
-
-    // public string getNextMemory()
-    // {
-    //     // if (memoryList.Length > 0)
-    //     // {
-    //     //     string removed = memoryList.Remove(0);
-    //     //     return removed;
+        if (memoryList.Count > 0)
+        {
+            MemoryInfo removed = memoryList[0];
+            memoryList.RemoveAt(0);
+            return removed;
             
-    //     // }
-    //     // else 
-    //     // {
-
-    //     // }
-    // }
+        }
+        else 
+        {
+            return null;
+        }
+    }
 }
