@@ -5,15 +5,16 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private float socialmeter;
     [SerializeField] private float academicsmeter;
-    [SerializeField] private float happiness;
+    [SerializeField] private float happinessmeter;
     [SerializeField] private LevelInfo levelInfo;
     [SerializeField] private TMP_Text queueTimer;
     [SerializeField] private SnapController snapControl;
     [SerializeField] public List<MemoryBlock> queueSpaces;
     [SerializeField] public List<MemoryBlock> memSpaces;
-    //[SerializeField] public TMP_Text statusField;
+    [SerializeField] public TMP_Text statusField;
+    [SerializeField] public TMP_Text academicsField;
+    [SerializeField] public TMP_Text happyField;
     
     private float timer = 7;
     //private gameObject heldMem;
@@ -24,13 +25,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        socialmeter = 50;
+        happinessmeter = 50;
         academicsmeter = 50;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //update meters
+        happyField.text = "Happiness: " + happinessmeter.ToString();
+        academicsField.text = "Academics: " + academicsmeter.ToString();
+
         if (timer > 0)
         {
             queueTimer.text = string.Format("(Loading: {0:00})", timer);
@@ -80,9 +85,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void updateSocials(float change)
+    public void updateHappiness(float change)
     {
-        socialmeter += change;
+        happinessmeter += change;
     }
 
     public void updateAcademics(float change)
