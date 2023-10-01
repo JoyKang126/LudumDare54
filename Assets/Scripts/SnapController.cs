@@ -38,6 +38,7 @@ public class SnapController : MonoBehaviour
             closestBlock.isOccupied = true;
             closestBlock.heldMem = mem;
             mem.snappedTo = closestBlock;
+            mem.snappedToLast.isOccupied = false;
             mem.snappedToLast = null;
         }
 

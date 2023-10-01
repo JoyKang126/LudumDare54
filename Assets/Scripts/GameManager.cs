@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float academicsmeter;
     [SerializeField] private float happiness;
     [SerializeField] private LevelInfo levelInfo;
+    [SerializeField] private TMP_Text queueTimer;
     [SerializeField] private SnapController snapControl;
     [SerializeField] public List<MemoryBlock> queueSpaces;
     [SerializeField] public List<MemoryBlock> memSpaces;
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         if (timer > 0)
         {
+            queueTimer.text = string.Format("(Loading: {0:00})", timer);
             timer -= Time.deltaTime;
             Debug.Log(timer);
         }
@@ -73,7 +75,6 @@ public class GameManager : MonoBehaviour
                 }
                 
             }
-            
             timer = 7;
         }
 
