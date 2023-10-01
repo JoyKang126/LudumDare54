@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
                     //create a new memory block at the spot found above
                     GameObject mem = Instantiate (memPrefab, pos, Quaternion.identity);
                     mem.GetComponent<Memory>().snappedTo = selected;
+                    selected.heldMem = mem.GetComponent<Memory>();
                     mem.GetComponent<Memory>().memID = nextmem.memID;
                     mem.GetComponent<Memory>().memDesc = nextmem.memDescription;
                     mem.SetActive(true);

@@ -31,12 +31,12 @@ public class SnapController : MonoBehaviour
                 closestDistance = currentDistance;
             }
         }
-        Debug.Log(closestDistance);
 
         if (closestBlock != null && closestDistance <= snapRange && !closestBlock.isOccupied)
         {
             mem.transform.position = closestBlock.transform.position;
             closestBlock.isOccupied = true;
+            closestBlock.heldMem = mem;
             mem.snappedTo = closestBlock;
             mem.snappedToLast = null;
         }
@@ -49,6 +49,7 @@ public class SnapController : MonoBehaviour
             {
                 mem.snappedTo = mem.snappedToLast;
                 mem.snappedTo.isOccupied = true;
+                mem.snappedTo.heldMem = mem;
                 mem.snappedToLast = null;
             }
         }
