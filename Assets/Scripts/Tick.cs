@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tick : MonoBehaviour
 {
     public float interval = 2;
-    private Vector3 startingPos = new Vector3(-4.863126f, 4.435083f, 0f);
+    private Vector3 startingPos = new Vector3(0.09f, 4.44f, 0f);
     private Vector3 spawnPos;
     // Start is called before the first frame update
     void Start()
