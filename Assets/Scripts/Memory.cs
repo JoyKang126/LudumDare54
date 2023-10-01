@@ -53,7 +53,7 @@ public class Memory : MonoBehaviour
         {
             snappedToLast = snappedTo;
             snappedTo.heldMem = null;
-            snappedTo.isOccupied = false;
+            //snappedTo.isOccupied = false;
             snappedTo = null;
         }  
     }
