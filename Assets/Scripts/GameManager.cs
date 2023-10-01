@@ -95,8 +95,8 @@ public class GameManager : MonoBehaviour
         academicsmeter += change;
     }
 
-    // public void updateStatusField(string content)
-    // {
-    //     statusField.text = content;
-    // }
+    public void updateStatusField(string content)
+    {
+        // statusField.text = content;
+    }
 }
