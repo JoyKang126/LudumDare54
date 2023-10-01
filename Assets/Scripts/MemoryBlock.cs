@@ -5,5 +5,6 @@ using UnityEngine;
 public class MemoryBlock : MonoBehaviour
 {
     public bool isOccupied;
+    public Memory heldMem;
     
 }
