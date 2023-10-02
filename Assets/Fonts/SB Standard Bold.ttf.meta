@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: cd21739ce2d968842a4af9d35fc57bc4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - SB Standard
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e1786ee5798212f40a460d332e96e8e6, type: 3}
+  - {fileID: 12800000, guid: 97397da592d9326478244c84166199b8, type: 3}
+  - {fileID: 12800000, guid: f161add4a14ec714baabfb45bb6e5fcb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

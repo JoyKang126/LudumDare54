@@ -5,18 +5,16 @@ using UnityEngine;
 public class MeterTick : MonoBehaviour
 {
     [SerializeField] private float interval;
-    [SerializeField] private Vector3 originPos;
-    [SerializeField] private int health;
-    private int maxHealth;
+    private Vector3 originPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        originPos = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    public void updateMeter(float health)
     {
         transform.position = originPos + new Vector3(interval*health, 0,0);
     }

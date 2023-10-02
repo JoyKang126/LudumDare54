@@ -13,8 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] public List<MemoryBlock> queueSpaces;
     [SerializeField] public List<MemoryBlock> memSpaces;
     [SerializeField] public TMP_Text statusField;
-    [SerializeField] public TMP_Text academicsField;
-    [SerializeField] public TMP_Text happyField;
+    [SerializeField] public MeterTick academicsMeter;
+    [SerializeField] public MeterTick happyMeter;
+     [SerializeField] public Portrait portrait;
     
     private float timer = 3;
     //private gameObject heldMem;
@@ -25,17 +26,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        happinessmeter = 50;
-        academicsmeter = 50;
+        happinessmeter = 0;
+        academicsmeter = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         //update meters
-        happyField.text = "Happiness: " + happinessmeter.ToString();
-        academicsField.text = "Academics: " + academicsmeter.ToString();
-
+        academicsMeter.updateMeter(academicsmeter);
+        happyMeter.updateMeter(happinessmeter);
+        
         if (timer > 0)
         {
             queueTimer.text = string.Format("(Loading: {0:00})", timer);
