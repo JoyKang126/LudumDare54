@@ -36,7 +36,12 @@ public class GameManager : MonoBehaviour
         //update meters
         academicsMeter.updateMeter(academicsmeter);
         happyMeter.updateMeter(happinessmeter);
-        
+
+        if(academicsmeter < -4 || happinessmeter < -4)
+        {
+            //trigger endstate
+        }
+
         if (timer > 0)
         {
             queueTimer.text = string.Format("(Loading: {0:00})", timer);
