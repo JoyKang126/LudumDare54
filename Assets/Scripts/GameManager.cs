@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         {
             queueTimer.text = string.Format("(Loading: {0:00})", timer);
             timer -= Time.deltaTime;
-            Debug.Log(timer);
+            // Debug.Log(timer);
         }
         else
         {
@@ -97,6 +97,6 @@ public class GameManager : MonoBehaviour
 
     public void updateStatusField(string content)
     {
-        // statusField.text = content;
+        statusField.text = content;
     }
 }

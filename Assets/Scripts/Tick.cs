@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Tick : MonoBehaviour
 {
-    public float interval = 2;
-    private Vector3 startingPos = new Vector3(0.09f, 4.44f, 0f);
+    [SerializeField] private float interval = 2;
+    [SerializeField] private float tickDistance = -0.5f;
     private Vector3 spawnPos;
     // Start is called before the first frame update
     void Start()
     {
-        spawnPos = startingPos + new Vector3(0, -1, 0);
+        spawnPos = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
         InvokeRepeating("ChangePosition", 0, interval);
     }
 
@@ -22,6 +22,6 @@ public class Tick : MonoBehaviour
 
     void ChangePosition() {
         transform.position = spawnPos;
-        spawnPos += new Vector3(0, -1, 0);
+        spawnPos += new Vector3(0, tickDistance , 0);
     }
 }
