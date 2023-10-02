@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         if(academicsmeter < -4 || happinessmeter < -4)
         {
             //trigger endstate
+            endGame();
         }
 
         if (timer > 0)
@@ -83,6 +84,7 @@ public class GameManager : MonoBehaviour
                 {
                     //queue is full
                     //trigger end game state
+                    endGame();
                 }
                 
             }
@@ -104,5 +106,10 @@ public class GameManager : MonoBehaviour
     public void updateStatusField(string content)
     {
         statusField.text = content;
+    }
+
+    public void endGame() {
+        // implement endgame
+        Debug.Log("end game");
     }
 }

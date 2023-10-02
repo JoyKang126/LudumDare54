@@ -62,6 +62,20 @@ public class Event : MonoBehaviour
         yield return new WaitForSeconds(2);
         eventName.color = new Color(1, 1, 1, 0.5f);
 
+        // set portrait and go back to neutral
+        if (found == num_req) {
+            // pass
+            gm.portrait.setHappy();
+        }
+        else if (found == 0) {
+            // fail
+            gm.portrait.setSad();
+        }
+
+        yield return new WaitForSeconds(2);
+        gm.portrait.setNeutral();
+
+        // set meters and status
         if (isHappiness) {
             gm.updateHappiness(deltaScore);
         }
