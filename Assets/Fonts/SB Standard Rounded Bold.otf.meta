@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f94a6bef384643e4a98f98a65f80c1f9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - SB Standard Rounded
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2593b54f2e5ef2f468692274da4170c2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -46,6 +46,10 @@ public class Memory : MonoBehaviour
     private void OnMouseDown()
     {
         isDragged = true;
+        gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "drag";
+        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "drag";
+        transform.GetChild(1).gameObject.GetComponent<Canvas>().sortingLayerName = "drag";
+        transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "drag";
         mouseDragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         spriteDragStartPosition = transform.localPosition;
         lastPosition = transform.position; //save in case of bad movement
@@ -73,6 +77,10 @@ public class Memory : MonoBehaviour
     private void OnMouseUp()
     {
         isDragged = false;
+        gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
+        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
+        transform.GetChild(1).gameObject.GetComponent<Canvas>().sortingLayerName = "notdrag";
+        transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
         if (transform.localPosition == spriteDragStartPosition)
         {
             clicked = true;
