@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Tick : MonoBehaviour
 {
-    [SerializeField] private float interval = 2;
-    [SerializeField] private float tickDistance = -0.5f;
+    [SerializeField] private float interval;
+    [SerializeField] private float tickDistance;
     private Vector3 spawnPos;
     // Start is called before the first frame update
     void Start()
