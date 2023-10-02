@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public TMP_Text academicsField;
     [SerializeField] public TMP_Text happyField;
     
-    private float timer = 7;
+    private float timer = 3;
     //private gameObject heldMem;
     public bool isHolding;
     public GameObject memPrefab;
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
                 }
                 
             }
-            timer = 7;
+            timer = 3;
         }
 
     }
