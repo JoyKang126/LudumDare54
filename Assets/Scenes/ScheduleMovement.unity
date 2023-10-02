@@ -167,8 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c052759e2ab77c64498891674bba816b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memID: histLecture
-  memDescription: I HATE HISTORY
+  memID: JOBFAIR
+  memDescription: "YOU REVIEW YOUR RESUME AND ALL IT HAS IS SBHS GRADUATE AND  PROFESSIONAL
+    SHREDDER. YOU DON\u2019T EVEN SKATE."
 --- !u!1 &148231530
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,8 +298,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c052759e2ab77c64498891674bba816b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memID: funnyJoke
-  memDescription: What did the pirate say when he turned 80?
+  memID: BIOQUIZ
+  memDescription: "YOU GO OVER YOUR BIO NOTES ON CYBERCORE INTEGRATION FOR THIS WEEK\u2019S
+    QUIZ. WHY IS IT WEIGHED SO HEAVILY?"
 --- !u!1 &253123122
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,8 +429,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c052759e2ab77c64498891674bba816b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memID: kristenColor
-  memDescription: Kristen's dress is so pretty
+  memID: MIDTERM1
+  memDescription: "YOU READ CHAPTER 12: HUMAN-CYBER INTEGRATION. IT\u2019S JUST A
+    BUNCH OF DATES, LAWS, AND OLD PEOPLE. YAWN."
 --- !u!1 &321515301
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321515301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -9.13, y: -3.75, z: 0}
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -528,15 +531,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bd2e6aa39e799438c6887e39745841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requirements: []
+  requirements:
+  - JOBFAIR
   gm: {fileID: 1332055534}
   eventName: {fileID: 596169386}
-  memSpaces:
-  - {fileID: 1015704895}
-  - {fileID: 1636640977}
-  - {fileID: 845162982}
-  - {fileID: 329861814}
-  - {fileID: 1721524830}
+  isHappiness: 1
+  isAcademics: 0
+  outcomes:
+  - value: -1
+    statusString: YOU HAND YOUR RESUME TO A RECRUITER. THEY GIVE YOU A NASTY LOOK
+      AND TELL YOU TO STOP WASTING THEIR TIME WITH PRANKS.
+  - value: 1
+    statusString: A RECRUITER THINKS YOU ARE A GODO FIT FOR THEIR INTERNSHIP. YOU
+      GET THEIR CONTACT.
 --- !u!61 &321515305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -738,8 +745,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c052759e2ab77c64498891674bba816b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memID: momBday
-  memDescription: March 9
+  memID: BLORKING
+  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
+    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
 --- !u!1 &575697440
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +783,7 @@ MonoBehaviour:
   - {fileID: 200070801}
   - {fileID: 1660247595}
   - {fileID: 530770021}
-  - {fileID: 1882095840}
+  - {fileID: 1964765330}
 --- !u!4 &575697442
 Transform:
   m_ObjectHideFlags: 0
@@ -1034,7 +1042,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822091703}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.87, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1493,7 +1501,7 @@ Transform:
   - {fileID: 200070800}
   - {fileID: 1660247594}
   - {fileID: 530770020}
-  - {fileID: 1882095839}
+  - {fileID: 1964765329}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1526,10 +1534,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114f6d03a64479c4792e3c72d2e67cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  socialmeter: 0
   academicsmeter: 0
-  happiness: 0
+  happinessmeter: 0
   levelInfo: {fileID: 575697441}
+  queueTimer: {fileID: 0}
   snapControl: {fileID: 2008919869}
   queueSpaces:
   - {fileID: 1644480306}
@@ -1543,6 +1551,9 @@ MonoBehaviour:
   - {fileID: 845162982}
   - {fileID: 329861814}
   - {fileID: 1721524830}
+  statusField: {fileID: 0}
+  academicsField: {fileID: 0}
+  happyField: {fileID: 0}
   isHolding: 0
   memPrefab: {fileID: 5041683533276183388, guid: 666e25116ec49e2409012ed3f684b64f, type: 3}
 --- !u!4 &1332055535
@@ -1653,7 +1664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371874050}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.09, y: 4.44, z: 0}
+  m_LocalPosition: {x: -11.29, y: 4.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1939,8 +1950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c052759e2ab77c64498891674bba816b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memID: gasPrices
-  memDescription: Why is it so expensive
+  memID: SHOPERRAND1
+  memDescription: "YOU\u2019RE RUNNING LOW ON NUERAGEL. SPOT MARKET SHOULD HAVE SOME."
 --- !u!1 &1721524828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,52 +2093,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   heldMem: {fileID: 0}
---- !u!1 &1882095838
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1882095839}
-  - component: {fileID: 1882095840}
-  m_Layer: 0
-  m_Name: mem6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1882095839
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882095838}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1305773213}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1882095840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882095838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c052759e2ab77c64498891674bba816b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  memID: doctorAppt
-  memDescription: I hope i am not dying
 --- !u!1 &1890190629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2152,7 +2117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890190629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.79, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2332,6 +2297,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1964765328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1964765329}
+  - component: {fileID: 1964765330}
+  m_Layer: 0
+  m_Name: mem6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1964765329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964765328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1305773213}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1964765330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964765328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c052759e2ab77c64498891674bba816b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memID: TUESDAY
+  memDescription: YOU GO TO BITPLATE TO TRY THE TUESDAY SPECIAL. YOU NOTE TUESDAYS
+    ARE NOT THE BEST DAY TO COME.
 --- !u!1 &1992967579
 GameObject:
   m_ObjectHideFlags: 0
