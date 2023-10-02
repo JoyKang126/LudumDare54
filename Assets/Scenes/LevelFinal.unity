@@ -208,7 +208,7 @@ MonoBehaviour:
   statusField: {fileID: 1485736133}
   academicsMeter: {fileID: 1578492489}
   happyMeter: {fileID: 1946629488}
-  portrait: {fileID: 0}
+  portrait: {fileID: 1324813207}
   isHolding: 0
   memPrefab: {fileID: 1280882201}
 --- !u!4 &7117763
@@ -7784,7 +7784,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ERRANDS
+  m_text: 'GROCERY SHOPPING
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a81c701c65f78b448fa79aaa4a29d10, type: 2}
   m_sharedMaterial: {fileID: -4351435839455299, guid: 6a81c701c65f78b448fa79aaa4a29d10, type: 2}
