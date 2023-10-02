@@ -66,7 +66,7 @@ public class SnapController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Memory mem in draggableObjects)
+        foreach (Memory mem in draggableObjects.ToArray())
         {
             if (mem == null)
                 draggableObjects.Remove(mem);
