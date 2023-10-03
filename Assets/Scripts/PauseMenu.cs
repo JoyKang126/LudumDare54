@@ -21,29 +21,34 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        FindObjectOfType<AudioManager>().Play("popdefault");
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void Resume()
     {
+        FindObjectOfType<AudioManager>().Play("click");
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
     }
 
     public void BackToStart()
     {
+        FindObjectOfType<AudioManager>().Play("click");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Start");
     }
 
     public void GoToTutorial() {
         Time.timeScale = 1f;
+        FindObjectOfType<AudioManager>().Play("click");
         SceneManager.LoadScene("Tutorial");
     }
 
     public void RestartLevel() {
         Time.timeScale = 1f;
+        FindObjectOfType<AudioManager>().Play("click");
         SceneManager.LoadScene("LevelFinal");
     }
 }

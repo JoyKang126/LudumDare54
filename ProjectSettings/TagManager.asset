@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - tick
   layers:
   - Default
   - TransparentFX
@@ -46,4 +47,7 @@ TagManager:
     locked: 0
   - name: drag
     uniqueID: 4120873701
+    locked: 0
+  - name: ui
+    uniqueID: 2839267365
     locked: 0

@@ -30,58 +30,78 @@ public class Event : MonoBehaviour
         
     }
     public IEnumerator OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Trigger");
-        
-        int found = 0;  // index of outcome we'll use
-        int num_req = requirements.Count;
-        Debug.Log("# reqs: " + num_req);
-        foreach (MemoryBlock mb in gm.memSpaces)
+        if (other.gameObject.tag == "tick")
         {
-            if (mb.isOccupied)
+            int found = 0;  // index of outcome we'll use
+            int num_req = requirements.Count;
+            Debug.Log("# reqs: " + num_req);
+            foreach (MemoryBlock mb in gm.memSpaces)
             {
-                Memory mem = mb.heldMem;
-                Debug.Log("event memID: " + mem.memID + " event memDesc: " + mem.memDesc);
-                string mem_id = mem.memID;
-                foreach (string req in this.requirements) {
-                    if (req == mem_id) {
-                        found++;
-                        break;
+                if (mb.isOccupied)
+                {
+                    Memory mem = mb.heldMem;
+                    Debug.Log("event memID: " + mem.memID + " event memDesc: " + mem.memDesc);
+                    string mem_id = mem.memID;
+                    foreach (string req in this.requirements) {
+                        if (req == mem_id) {
+                            found++;
+                            mem.transform.GetChild(2).gameObject.SetActive(true);
+                            break;
+                        }
+                    }
+                }
+                if (found == num_req) {
+                    break;
+                }  
+            }
+            foreach (MemoryBlock mb in gm.queueSpaces)
+            {
+                if (mb.isOccupied)
+                {
+                    Memory mem = mb.heldMem;
+                    string mem_id = mem.memID;
+                    foreach (string req in this.requirements) {
+                        if (req == mem_id) {
+                            mem.transform.GetChild(2).gameObject.SetActive(true);
+                            break;
+                        }
                     }
                 }
             }
+            Outcome oc = outcomes[found];
+            int deltaScore = oc.value;
+            string statusUpdateString = oc.statusString;
+            Debug.Log("outcome: " + deltaScore + ' ' + statusUpdateString);
+
+            // wait for marker to pass the tick, then grey out the event + update fields
+            yield return new WaitForSeconds(0);
+            //yield return;
+            eventName.color = new Color(1, 1, 1, 0.5f);
+
+            // set portrait and go back to neutral
             if (found == num_req) {
-                break;
-            }  
-        }
-        Outcome oc = outcomes[found];
-        int deltaScore = oc.value;
-        string statusUpdateString = oc.statusString;
-        Debug.Log("outcome: " + deltaScore + ' ' + statusUpdateString);
+                // pass
+                gm.portrait.setHappy();
+            }
+            else if (found == 0) {
+                // fail
+                gm.portrait.setSad();
+            }
+            gm.updateStatusField(statusUpdateString);
+            FindObjectOfType<AudioManager>().Play("memory");
+            
 
-        // wait for marker to pass the tick, then grey out the event + update fields
-        yield return new WaitForSeconds(2);
-        eventName.color = new Color(1, 1, 1, 0.5f);
-
-        // set portrait and go back to neutral
-        if (found == num_req) {
-            // pass
-            gm.portrait.setHappy();
+            // set meters and status
+            if (isHappiness) {
+                gm.updateHappiness(deltaScore);
+            }
+            if (isAcademics) {
+                gm.updateAcademics(deltaScore);
+            }
+            yield return new WaitForSeconds(3);
+            //yield return;
+            gm.portrait.setNeutral();
+            
         }
-        else if (found == 0) {
-            // fail
-            gm.portrait.setSad();
-        }
-
-        yield return new WaitForSeconds(2);
-        gm.portrait.setNeutral();
-
-        // set meters and status
-        if (isHappiness) {
-            gm.updateHappiness(deltaScore);
-        }
-        if (isAcademics) {
-            gm.updateAcademics(deltaScore);
-        }
-        gm.updateStatusField(statusUpdateString);
     }
 }
