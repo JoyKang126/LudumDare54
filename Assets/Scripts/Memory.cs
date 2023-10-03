@@ -14,7 +14,7 @@ public class Memory : MonoBehaviour
 
     public string memID;
     public string memDesc;
-    private bool isDragged = false;
+    public bool isDragged = false;
     private bool clicked;
     private Vector3 mouseDragStartPosition;
     private Vector3 spriteDragStartPosition;
@@ -45,54 +45,91 @@ public class Memory : MonoBehaviour
 
     private void OnMouseDown()
     {
-        isDragged = true;
-        gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "drag";
-        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "drag";
-        transform.GetChild(1).gameObject.GetComponent<Canvas>().sortingLayerName = "drag";
-        transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "drag";
-        mouseDragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        spriteDragStartPosition = transform.localPosition;
-        lastPosition = transform.position; //save in case of bad movement
-        if (snappedTo != null)
+        if(Time.timeScale > 0f)
         {
-            snappedToLast = snappedTo;
-            snappedTo.heldMem = null;
-            //snappedTo.isOccupied = false;
-            snappedTo = null;
-        }  
+            isDragged = true;
+            gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "drag";
+            transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "drag";
+            transform.GetChild(1).gameObject.GetComponent<Canvas>().sortingLayerName = "drag";
+            transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "drag";
+
+            FindObjectOfType<AudioManager>().Play("click");
+            mouseDragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            spriteDragStartPosition = transform.localPosition;
+            lastPosition = transform.position; //save in case of bad movement
+            if (snappedTo != null)
+            {
+                snappedToLast = snappedTo;
+                //snappedTo.heldMem = null;
+                //snappedTo.isOccupied = false;
+                //snappedTo = null;
+            } 
+        }
     }
 
     private void OnMouseDrag()
     {
-        foreach(Memory obj in memories)
+        if(Time.timeScale > 0f)
         {
-            obj.clicked = false;
+            foreach(Memory obj in memories)
+            {
+                obj.clicked = false;
+            }
+            if(isDragged)
+            {
+                transform.localPosition = spriteDragStartPosition + (Camera.main.ScreenToWorldPoint(Input.mousePosition) - mouseDragStartPosition);
+            }
         }
-        if(isDragged)
-        {
-            transform.localPosition = spriteDragStartPosition + (Camera.main.ScreenToWorldPoint(Input.mousePosition) - mouseDragStartPosition);
-        }
+        
     }
 
     private void OnMouseUp()
+    {
+        if(Time.timeScale > 0f)
+        {
+            isDragged = false;
+            gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
+            transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
+            transform.GetChild(1).gameObject.GetComponent<Canvas>().sortingLayerName = "notdrag";
+            transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
+            if (transform.localPosition == spriteDragStartPosition)
+            {
+                clicked = true;
+                foreach(Memory obj in memories)
+                {
+                    if(obj != this)
+                    {
+                        obj.clicked = false;
+                    }
+                }
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Play("drop");
+            }
+            dragEndedCallback(this);
+            }
+    }
+
+    public void recoverAfterPause()
     {
         isDragged = false;
         gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
         transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
         transform.GetChild(1).gameObject.GetComponent<Canvas>().sortingLayerName = "notdrag";
         transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
-        if (transform.localPosition == spriteDragStartPosition)
+
+        transform.position = lastPosition;
+
+        if (snappedToLast != null)
         {
-            clicked = true;
-            foreach(Memory obj in memories)
-            {
-                if(obj != this)
-                {
-                    obj.clicked = false;
-                }
-            }
+            snappedTo = snappedToLast;
+            snappedTo.isOccupied = true;
+            snappedTo.heldMem = this;
+            snappedToLast = null;
         }
-        dragEndedCallback(this);
     }
 
 }
+
+

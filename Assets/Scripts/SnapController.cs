@@ -7,7 +7,7 @@ public class SnapController : MonoBehaviour
     // Start is called before the first frame update
     public List<MemoryBlock> memorySpaces;
     public List<Memory> draggableObjects;
-    public float snapRange = 0.4f;
+    private float snapRange = 0.7f;
 
     void Start()
     {
@@ -34,10 +34,12 @@ public class SnapController : MonoBehaviour
 
         if (closestBlock != null && closestDistance <= snapRange && !closestBlock.isOccupied)
         {
+            Debug.Log(snapRange);
             mem.transform.position = closestBlock.transform.position;
             closestBlock.isOccupied = true;
             closestBlock.heldMem = mem;
             mem.snappedTo = closestBlock;
+            mem.snappedToLast.heldMem = null;
             mem.snappedToLast.isOccupied = false;
             mem.snappedToLast = null;
         }

@@ -123,6 +123,117 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &56390832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 56390834}
+  - component: {fileID: 56390833}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &56390833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56390832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccfe1c093d4f6e46be6d017a0c957ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: bgm
+    clip: {fileID: 8300000, guid: 65e71b45ed8e8ec4a9d997daab97f02c, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: click
+    clip: {fileID: 8300000, guid: e7e55c500033de449a9cad45b6efea44, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: drop
+    clip: {fileID: 8300000, guid: b74bea867fed3a941a72756a59cfb4fa, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: delete
+    clip: {fileID: 8300000, guid: ac0e64b03aa607548872ddede3512bb2, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: memory
+    clip: {fileID: 8300000, guid: 3cf05190cc3fd954bb86c9398a536801, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: popdefault
+    clip: {fileID: 8300000, guid: 80715eeb59d8dd34591cb6212168a10c, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: poperror
+    clip: {fileID: 8300000, guid: e7f163901b95732419b32ce3bf356061, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: dialup
+    clip: {fileID: 8300000, guid: 0e03057d6f3854148aa77fbc049a6ad2, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: newmemory
+    clip: {fileID: 8300000, guid: 54632355f41ad164fadfb73aeefbca5e, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: badending
+    clip: {fileID: 8300000, guid: d4198147db9656f449dcde823976b65c, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: goodending
+    clip: {fileID: 8300000, guid: 72135e0eb2269554a9976a4f46cf0dd8, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+--- !u!4 &56390834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56390832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6084273, y: 0.22504498, z: 0.07378606}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &88801206
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.98, y: 2.06}
+  m_AnchoredPosition: {x: 0, y: -0.43}
   m_SizeDelta: {x: 0.5908, y: 0.2493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183414810
@@ -435,7 +546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.0810394, y: -4.7875633}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 18.4756, y: 9.6766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028

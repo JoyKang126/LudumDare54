@@ -209,6 +209,8 @@ MonoBehaviour:
   academicsMeter: {fileID: 1578492489}
   happyMeter: {fileID: 1946629488}
   portrait: {fileID: 1324813207}
+  performanceError: {fileID: 1199406126}
+  queueError: {fileID: 1526881961}
   isHolding: 0
   memPrefab: {fileID: 1280882201}
 --- !u!4 &7117763
@@ -256,7 +258,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 1
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &13432246
 MonoBehaviour:
@@ -321,7 +323,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: 0}
+  m_Offset: {x: 0.0816455, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -332,7 +334,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26, y: 5}
+  m_Size: {x: 0.23670897, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &27407531
 SpriteRenderer:
@@ -426,7 +428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30299598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.16, y: 3.77, z: 0}
+  m_LocalPosition: {x: 1.16, y: 3.486, z: 0}
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -481,15 +483,13 @@ MonoBehaviour:
   isAcademics: 0
   outcomes:
   - value: -2
-    statusString: YOU FORGET TO STOP BY SPOT MARKET ON THE WAY HOME. YOU MANAGE TO
-      FALL ASLEEP WITH A HURTING HEAD AND EMPTY STOMACH.
+    statusString: YOU FORGET TO STOP BY SPOT MARKET ON THE WAY HOME. YOU FALL ASLEEP
+      WITH A HEADACHE AND EMPTY STOMACH.
   - value: -1
-    statusString: YOU BUY NEURAGEL BUT FORGET RICE. YOUR HEADACHE IS GONE BUT YOU
-      GO TO SLEEP HUNGRY.
-  - value: -1
-    statusString: YOU BUY RICE BUT FORGET NEURAGEL. YOU HAVE DINNER WITH A MIGRAINE.
+    statusString: YOU WENT GROCERY SHOPPING BUT CAME HOME AND REALIZED YOU FORGOT
+      SOMETHING. YOU'RE FRUSTRATED WITH YOURSELF.
   - value: 2
-    statusString: YOU BUY NUERAGEL AND RICE ON THE WAY HOME. YOURE HEADACHE GOES
+    statusString: YOU BUY NEURAGEL AND RICE ON THE WAY HOME. YOURE HEADACHE GOES
       AWAY AND YOU HAVE SOMETHING TO EAT TODAY.
 --- !u!212 &30299602
 SpriteRenderer:
@@ -588,8 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: WATCHEDFUN4
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: "YOU WATCH \u2018GAY EYE\u2019. IT\u2019S FUN. "
 --- !u!1 &42471724
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +619,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &42471726
 MonoBehaviour:
@@ -635,8 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: NARUTO
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: YOU MEET SOMEONE NAMED NARUTO-SASUKE. WHAT A DATED NAME.
 --- !u!1 &51892895
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.012, y: -4.2}
+  m_AnchoredPosition: {x: -0.012, y: -4.89}
   m_SizeDelta: {x: 1067.5001, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &51892897
@@ -836,7 +834,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 27
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &99576008
 MonoBehaviour:
@@ -883,7 +881,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 96
+  m_RootOrder: 95
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &107687216
 MonoBehaviour:
@@ -929,7 +927,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 71
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &116457113
 MonoBehaviour:
@@ -975,7 +973,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 88
+  m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &134673117
 MonoBehaviour:
@@ -1122,7 +1120,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 53
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &146083773
 MonoBehaviour:
@@ -1215,7 +1213,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &155108366
 MonoBehaviour:
@@ -1230,8 +1228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: WEBTOONS
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: YOU READ SOME WEBTOONS BEFORE BED. YOU END UP READING UNTIL 4AM.
 --- !u!1 &161698302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,7 +1418,6 @@ MonoBehaviour:
   - {fileID: 632704446}
   draggableObjects:
   - {fileID: 1280882203}
-  snapRange: 0.4
 --- !u!4 &171401642
 Transform:
   m_ObjectHideFlags: 0
@@ -1467,7 +1463,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 54
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &173798936
 MonoBehaviour:
@@ -1648,7 +1644,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 37
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &205860464
 MonoBehaviour:
@@ -1679,7 +1675,7 @@ GameObject:
   - component: {fileID: 218230497}
   m_Layer: 0
   m_Name: Tick
-  m_TagString: Untagged
+  m_TagString: tick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1704,7 +1700,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &218230498
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1729,7 +1725,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.01}
+  m_Size: {x: 0.6, y: 0.2}
   m_EdgeRadius: 0
 --- !u!114 &218230499
 MonoBehaviour:
@@ -1743,7 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6dcfdac3bd0714484af6df0cffae6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 3
+  interval: 7.5
   tickDistance: -0.175
 --- !u!212 &218230500
 SpriteRenderer:
@@ -1839,7 +1835,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229239584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.16, y: 2.74, z: 0}
+  m_LocalPosition: {x: 1.16, y: 2.868, z: 0}
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1893,11 +1889,11 @@ MonoBehaviour:
   isAcademics: 1
   outcomes:
   - value: -2
-    statusString: YOU SCOLD ELLIS FOR RISKING YOUR GRADES. THEY BUY YOU LUNCH FOR
-      YOUR EFFORTS AND THE TA PRAISES YOU FOR A THOROUGH PRESENTATION.
-  - value: 2
     statusString: YOU FORGOT TO DO THE CITATIONS AND ARE TOO EMBARASSED TO EVEN SHOW
       UP. YOU STOP TALKING TO ELLIS FOR A WHILE.
+  - value: 2
+    statusString: YOU SCOLD ELLIS FOR RISKING YOUR GRADES. THEY BUY YOU LUNCH FOR
+      YOUR EFFORTS AND THE TA PRAISES YOU FOR A THOROUGH PRESENTATION.
 --- !u!212 &229239588
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1980,7 +1976,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 70
+  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &230730678
 MonoBehaviour:
@@ -2090,107 +2086,6 @@ MonoBehaviour:
   memID: CAFEHEAR2
   memDescription: 'YOU OVERHEAR SOMEONE WITH A REALLY WEIRD LAUGH AT YOUR FAVORITE
     COFFEE SHOP. '
---- !u!1 &254215873
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 254215874}
-  - component: {fileID: 254215877}
-  - component: {fileID: 254215876}
-  - component: {fileID: 254215875}
-  m_Layer: 5
-  m_Name: Canvas (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &254215874
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254215873}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2009681099}
-  m_Father: {fileID: 1307456650}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.7651, y: -2.2582}
-  m_SizeDelta: {x: 18.4756, y: 9.6766}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &254215875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254215873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &254215876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254215873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
---- !u!223 &254215877
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254215873}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 5
-  m_TargetDisplay: 0
 --- !u!1 &256632057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,7 +2116,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 45
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &256632059
 MonoBehaviour:
@@ -2544,7 +2439,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312571311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.16, y: 0.58, z: 0}
+  m_LocalPosition: {x: 1.16, y: 0.342, z: 0}
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2600,16 +2495,13 @@ MonoBehaviour:
   outcomes:
   - value: -2
     statusString: YOU WERE HOPING THAT YOU COULD PASS ON PURE INTUITION. THAT HAS
-      NEVER WORKED. YOU GET 12% FROM SHEER LUCK.
+      NEVER WORKED. YOU GET 2 QUESTIONS CORRECT OUT OF FROM SHEER LUCK.
   - value: -1
-    statusString: "YOU WERE COUNTING ON OLIVIA TURNER CARRYING YOU. SHE DIDN\u2019T.
-      YOU GET 20%."
-  - value: 1
-    statusString: YOU MISSED THE QUESTION ABOUT OLIVIA TURNER BUT IT WAS EXTRA CREDIT
-      ANYWAYS. YOU GET 95%.
+    statusString: "THERE WERE QUESTIONS ON YOUR MIDTERM THAT YOU JUST COULDN\u2019T
+      ANSWER."
   - value: 2
-    statusString: YOU REMEMBERD ALL THE READING AND GOT THE OLIVIA TURNER EXTRA CREDIT
-      QUESTION. 105%!
+    statusString: YOU REMEMBERD ALL THE READING AND GOT THE NUEROLINKS EXTRA CREDIT
+      QUESTION.
 --- !u!212 &312571315
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2839,7 +2731,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &335387970
 MonoBehaviour:
@@ -2854,8 +2746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: WORECUTE5
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: "YOU\u2019RE WEARING A PINK JUMPSUIT TODAY. YOU FEEL CUTE. "
 --- !u!1 &358107797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,7 +2777,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 82
+  m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &358107799
 MonoBehaviour:
@@ -3025,7 +2916,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 52
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &376927107
 MonoBehaviour:
@@ -3206,7 +3097,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 75
+  m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &390157517
 MonoBehaviour:
@@ -3259,7 +3150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.012, y: -4.2}
+  m_AnchoredPosition: {x: -0.012, y: -4.8}
   m_SizeDelta: {x: 1067.5001, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439677060
@@ -3353,7 +3244,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 72
+  m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &453645875
 MonoBehaviour:
@@ -3445,7 +3336,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 93
+  m_RootOrder: 92
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &469927255
 MonoBehaviour:
@@ -3559,7 +3450,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1455699931
   m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &481876822
@@ -3592,7 +3483,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &481876824
 MonoBehaviour:
@@ -3607,8 +3498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: FUTURE1
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: YOU THINK ABOUT THE FUTURE. YOU FEEL A BIT SCARED.
 --- !u!1 &482751120
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,7 +3529,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 62
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &482751122
 MonoBehaviour:
@@ -3685,7 +3575,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 2
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &490345633
 MonoBehaviour:
@@ -3700,7 +3590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: SHOPERRAND1
-  memDescription: "YOU\u2019RE RUNNING LOW ON NUERAGEL. SPOT MARKET SHOULD HAVE SOME."
+  memDescription: "YOU\u2019RE RUNNING LOW ON NEURAGEL. SPOT MARKET SHOULD HAVE SOME."
 --- !u!1 &492283082
 GameObject:
   m_ObjectHideFlags: 0
@@ -3831,7 +3721,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: 0}
+  m_Offset: {x: 0.08018985, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3842,7 +3732,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26, y: 5}
+  m_Size: {x: 0.23962028, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &499633602
 SpriteRenderer:
@@ -4124,7 +4014,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 24
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &520252663
 MonoBehaviour:
@@ -4236,7 +4126,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: 0}
+  m_Offset: {x: 0.07757515, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4247,7 +4137,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26, y: 5}
+  m_Size: {x: 0.24484968, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &524129285
 SpriteRenderer:
@@ -4390,7 +4280,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 22
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &582029938
 MonoBehaviour:
@@ -4482,7 +4372,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 69
+  m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &589460597
 MonoBehaviour:
@@ -4529,7 +4419,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 86
+  m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &596891490
 MonoBehaviour:
@@ -4576,7 +4466,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &598481109
 MonoBehaviour:
@@ -4591,8 +4481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: JOBFAIR
-  memDescription: "YOU REVIEW YOUR RESUME AND ALL IT HAS IS SBHS GRADUATE AND  PROFESSIONAL
-    SHREDDER. THIS WON\u2019T DO."
+  memDescription: "YOU REVIEW YOUR RESUME WITH A CAREER COUNSELOUR. YOU REALIZE ALL
+    IT HAS IS \u201CHIGH SCHOOL GRAD\u201D AND \u201CANIME HISTORIAN\u201D. THIS
+    WON\u2019T DO."
 --- !u!1 &616245322
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,7 +4514,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 95
+  m_RootOrder: 94
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &616245324
 MonoBehaviour:
@@ -4707,7 +4598,7 @@ MonoBehaviour:
     statusString: YOU HAND YOUR RESUME TO A RECRUITER. THEY GIVE YOU A NASTY LOOK
       AND TELL YOU TO STOP WASTING THEIR TIME WITH PRANKS.
   - value: 1
-    statusString: A RECRUITER THINKS YOU ARE A GODO FIT FOR THEIR INTERNSHIP. YOU
+    statusString: A RECRUITER THINKS YOU ARE A GOOD FIT FOR THEIR INTERNSHIP. YOU
       GET THEIR CONTACT.
 --- !u!212 &627494404
 SpriteRenderer:
@@ -4769,7 +4660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627494401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.16, y: 5.73, z: 0}
+  m_LocalPosition: {x: 1.16, y: 5.574, z: 0}
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4946,7 +4837,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &677507401
 MonoBehaviour:
@@ -4961,8 +4852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: CRAVING2
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: "YOU\u2019RE CRAVING BLOOD SAUSAGE."
 --- !u!1 &687462985
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,7 +4883,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 97
+  m_RootOrder: 96
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &687462987
 MonoBehaviour:
@@ -5107,7 +4997,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1455699931
   m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &705759677
@@ -5300,8 +5190,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1455699931
+  m_SortingLayer: 3
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 9b08ea15ae17cbc4eaedebd73f34d691, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5362,7 +5252,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 64
+  m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &737546308
 MonoBehaviour:
@@ -5553,7 +5443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773829056}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.16, y: -2.67, z: 0}
+  m_LocalPosition: {x: 1.16, y: -2.78, z: 0}
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5611,14 +5501,10 @@ MonoBehaviour:
     statusString: YOU BRING NOEL TO A PASTA PLACE. AS YOU ARE TALKING, NOEL ASKS
       YOU TO PLEASE CHEW WITH YOUR MOUTH CLOSED.
   - value: -1
-    statusString: YOU SURPRISE NOEL BY BRINGING THEM TO AN AUTHENTIC SUSHI BURRITO
-      JOINT. THEY CANT SEEM TO FOCUS ON WHAT YOU ARE SAYING FOR SOME REASON.
-  - value: 1
-    statusString: YOU BRING NOEL TO YOUR FAVORITE ITALIAN RESTAURANT. THEY LIKE THE
-      FOOD AND YOU MANAGE TO CHEW QUIETLY.
+    statusString: YOUR SECOND DATE WITH NOEL GOES WELL ENOUGH.
   - value: 2
     statusString: YOU SURPRISE NOEL BY BRINGING THEM TO AN AUTHENTIC SUSHI BURRITO
-      JOINT. YOU CHEW QUIETLY AS THEY TALK. THEY REACH HOLD YOUR HAND THE WAY HOME.
+      JOINT. YOU CHEW QUIETLY AS THEY TALK. THEY HOLD YOUR HAND ON THE WAY HOME.
 --- !u!212 &773829060
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5894,7 +5780,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 100
+  m_RootOrder: 99
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &839077178
 MonoBehaviour:
@@ -5987,7 +5873,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 104
+  m_RootOrder: 103
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &855332133
 MonoBehaviour:
@@ -6117,7 +6003,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &872609993
 MonoBehaviour:
@@ -6132,8 +6018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: ALONE
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: YOU WANT TO BE ALONE TODAY.
 --- !u!1 &873920837
 GameObject:
   m_ObjectHideFlags: 0
@@ -6164,7 +6049,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 51
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &873920839
 MonoBehaviour:
@@ -6211,7 +6096,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &875675059
 MonoBehaviour:
@@ -6226,8 +6111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: WATER
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: YOU DRANK TOO MUCH WATER RIGHT BEFORE LECTURE AND HAVE TO PEE REALLY
+    BAD.
 --- !u!1 &881037876
 GameObject:
   m_ObjectHideFlags: 0
@@ -6273,8 +6158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: WEIRDDREAM4
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: 'YOU HAD A WEIRD DREAM ABOUT EYEBALLS LAST NIGHT. YOU FEEL DISTURBED. '
 --- !u!1 &891916081
 GameObject:
   m_ObjectHideFlags: 0
@@ -6305,7 +6189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 89
+  m_RootOrder: 87
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &891916083
 MonoBehaviour:
@@ -6350,7 +6234,147 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab29d6bcef30f74abddd1b7d108d362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memoryList: []
+  memoryList:
+  - {fileID: 598481109}
+  - {fileID: 1319902365}
+  - {fileID: 155108366}
+  - {fileID: 875675059}
+  - {fileID: 335387970}
+  - {fileID: 1371465516}
+  - {fileID: 1769245695}
+  - {fileID: 1926888824}
+  - {fileID: 677507401}
+  - {fileID: 42471726}
+  - {fileID: 872609993}
+  - {fileID: 481876824}
+  - {fileID: 490345633}
+  - {fileID: 1973152539}
+  - {fileID: 975274922}
+  - {fileID: 13432246}
+  - {fileID: 881037878}
+  - {fileID: 954868762}
+  - {fileID: 2087088769}
+  - {fileID: 36803497}
+  - {fileID: 990693539}
+  - {fileID: 2051523068}
+  - {fileID: 99576008}
+  - {fileID: 1877905217}
+  - {fileID: 1463374562}
+  - {fileID: 1886566999}
+  - {fileID: 2137003761}
+  - {fileID: 1323539703}
+  - {fileID: 1333592627}
+  - {fileID: 582029938}
+  - {fileID: 1491795690}
+  - {fileID: 2113509737}
+  - {fileID: 1973321781}
+  - {fileID: 2058457263}
+  - {fileID: 1551462197}
+  - {fileID: 205860464}
+  - {fileID: 1975942905}
+  - {fileID: 1953468433}
+  - {fileID: 520252663}
+  - {fileID: 1432322599}
+  - {fileID: 2077418080}
+  - {fileID: 1454184619}
+  - {fileID: 256632059}
+  - {fileID: 1288077984}
+  - {fileID: 1407337440}
+  - {fileID: 1876543754}
+  - {fileID: 1812384030}
+  - {fileID: 1094730192}
+  - {fileID: 1470103579}
+  - {fileID: 1638417049}
+  - {fileID: 873920839}
+  - {fileID: 376927107}
+  - {fileID: 146083773}
+  - {fileID: 173798936}
+  - {fileID: 1759068995}
+  - {fileID: 949279007}
+  - {fileID: 1769354704}
+  - {fileID: 1514869988}
+  - {fileID: 1101297814}
+  - {fileID: 261877968}
+  - {fileID: 482751122}
+  - {fileID: 2049119183}
+  - {fileID: 737546308}
+  - {fileID: 1366548547}
+  - {fileID: 1640141288}
+  - {fileID: 1767316085}
+  - {fileID: 1758614970}
+  - {fileID: 1588512478}
+  - {fileID: 589460597}
+  - {fileID: 230730678}
+  - {fileID: 116457113}
+  - {fileID: 453645875}
+  - {fileID: 1428126319}
+  - {fileID: 1955591829}
+  - {fileID: 390157517}
+  - {fileID: 1673208512}
+  - {fileID: 1194409300}
+  - {fileID: 1538216926}
+  - {fileID: 1686169023}
+  - {fileID: 497660224}
+  - {fileID: 358107799}
+  - {fileID: 1950887271}
+  - {fileID: 1564577971}
+  - {fileID: 1743062737}
+  - {fileID: 596891490}
+  - {fileID: 1824397198}
+  - {fileID: 134673117}
+  - {fileID: 891916083}
+  - {fileID: 1024036330}
+  - {fileID: 1054560513}
+  - {fileID: 1130355112}
+  - {fileID: 1033547661}
+  - {fileID: 469927255}
+  - {fileID: 2052010953}
+  - {fileID: 616245324}
+  - {fileID: 107687216}
+  - {fileID: 687462987}
+  - {fileID: 1086577985}
+  - {fileID: 1179420640}
+  - {fileID: 839077178}
+  - {fileID: 1196548110}
+  - {fileID: 1798976648}
+  - {fileID: 1632235176}
+  - {fileID: 855332133}
+  - {fileID: 2013636315}
+  - {fileID: 1913001355}
+  - {fileID: 1521873486}
+  - {fileID: 806802405}
+  - {fileID: 1947887368}
+  - {fileID: 2080767128}
+  - {fileID: 374511551}
+  - {fileID: 576504454}
+  - {fileID: 1951374101}
+  - {fileID: 232582183}
+  - {fileID: 631386891}
+  - {fileID: 2035671582}
+  - {fileID: 231642259}
+  - {fileID: 1501439255}
+  - {fileID: 1971664348}
+  - {fileID: 665479358}
+  - {fileID: 150247013}
+  - {fileID: 161698304}
+  - {fileID: 1339254503}
+  - {fileID: 1945775392}
+  - {fileID: 1558306393}
+  - {fileID: 521394363}
+  - {fileID: 2073749928}
+  - {fileID: 840703033}
+  - {fileID: 1843441191}
+  - {fileID: 743638495}
+  - {fileID: 791465072}
+  - {fileID: 1271045156}
+  - {fileID: 1544797248}
+  - {fileID: 1543180536}
+  - {fileID: 1331002361}
+  - {fileID: 2028856677}
+  - {fileID: 1189617905}
+  - {fileID: 1245433893}
+  - {fileID: 1312761369}
+  - {fileID: 1213124265}
 --- !u!4 &902458045
 Transform:
   m_ObjectHideFlags: 0
@@ -6401,7 +6425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.5, y: 4}
+  m_AnchoredPosition: {x: 26.5, y: 3.8}
   m_SizeDelta: {x: 48, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &912517507
@@ -6599,7 +6623,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1455699931
   m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &930050228
@@ -6813,7 +6837,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 56
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &949279007
 MonoBehaviour:
@@ -6874,8 +6898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: DAYDREAM1
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: 'YOU DAYDREAM ABOUT GETTING A CYBER-DINOSAUR AS A PET. '
 --- !u!1 &967114818
 GameObject:
   m_ObjectHideFlags: 0
@@ -6913,7 +6936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.012, y: -4.2}
+  m_AnchoredPosition: {x: -0.012, y: -4.69}
   m_SizeDelta: {x: 1067.5001, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967114820
@@ -7007,7 +7030,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &975274922
 MonoBehaviour:
@@ -7022,8 +7045,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: RAGEQUIT4
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: 'YOU RAGE QUIT LEGION OF LEAGUES BECAUSE YOU WERE BANNED FOR MAKING
+    SOMEONE CRY. '
 --- !u!1 &975346268
 GameObject:
   m_ObjectHideFlags: 0
@@ -7097,7 +7120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980052454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.16, y: 4.73, z: 0}
+  m_LocalPosition: {x: 1.16, y: 4.51, z: 0}
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7237,7 +7260,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 25
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &990693539
 MonoBehaviour:
@@ -7328,7 +7351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.012, y: -4.2}
+  m_AnchoredPosition: {x: -0.012, y: -4.8}
   m_SizeDelta: {x: 1067.5001, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1011024422
@@ -7422,7 +7445,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 90
+  m_RootOrder: 88
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1024036330
 MonoBehaviour:
@@ -7468,7 +7491,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 81
+  m_RootOrder: 91
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1033547661
 MonoBehaviour:
@@ -7523,7 +7546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.012, y: -4.2}
+  m_AnchoredPosition: {x: -0.012, y: -4.7}
   m_SizeDelta: {x: 1067.5001, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040766098
@@ -7617,7 +7640,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 91
+  m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1054560513
 MonoBehaviour:
@@ -7865,7 +7888,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 98
+  m_RootOrder: 97
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1086577985
 MonoBehaviour:
@@ -7911,7 +7934,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 49
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1094730192
 MonoBehaviour:
@@ -7954,7 +7977,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097990066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.16, y: -0.53, z: 0}
+  m_LocalPosition: {x: 1.16, y: -1.38, z: 0}
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8171,7 +8194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126405248}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.16, y: 1.58, z: 0}
+  m_LocalPosition: {x: 1.16, y: 1.397, z: 0}
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8228,12 +8251,8 @@ MonoBehaviour:
   - value: -2
     statusString: NOEL SEEMS DISAPPOINTED BY BOTH YOUR HAIR AND LACK OF CONVERSATIONAL
       SKILLS. ARE YOU GOING TO GET A TEXT BACK?
-  - value: -1
-    statusString: "YOUR HAIR LOOKS PERFECT BUT YOU DON\u2019T HAVE MUCH TO TALK ABOUT.
-      IT\u2019S A BIT AWKWARD."
   - value: 1
-    statusString: NOEL SAYS THAT YOU LOOK A BIT DIFFERENT BUT SEEMS TO FORGET ABOUT
-      IT ONCE YOU START TALKING ABOUT JESSE PINKMAN. YOU HAVE A GOOD TIME.
+    statusString: "YOU GET FOOD WITH NOEL. IT\u2019S A BIT AWKWARD FOR SOME REASON."
   - value: 2
     statusString: YOUR HAIR LOOKS FANTASTIC AND THE FIRST TWO SEASONS OF BREAKING
       BAD MAKE FOR EXCELLENT CONVERSATION.
@@ -8319,7 +8338,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 92
+  m_RootOrder: 90
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1130355112
 MonoBehaviour:
@@ -8370,7 +8389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.5, y: 4}
+  m_AnchoredPosition: {x: 26.5, y: 3.4}
   m_SizeDelta: {x: 48, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132219966
@@ -8635,7 +8654,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 99
+  m_RootOrder: 98
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1179420640
 MonoBehaviour:
@@ -8687,7 +8706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.33, y: 1.35}
+  m_AnchoredPosition: {x: 0.175, y: 1.5}
   m_SizeDelta: {x: 1.3065, y: 0.2449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1184491164
@@ -8906,7 +8925,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 101
+  m_RootOrder: 100
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1196548110
 MonoBehaviour:
@@ -8953,6 +8972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1885039374}
+  sc: {fileID: 0}
 --- !u!4 &1199406128
 Transform:
   m_ObjectHideFlags: 0
@@ -8961,7 +8981,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199406126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.31, y: 0.86, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9110,7 +9130,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: 0}
+  m_Offset: {x: 0.07757516, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9121,7 +9141,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26, y: 5}
+  m_Size: {x: 0.24484965, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &1261524120
 SpriteRenderer:
@@ -9488,7 +9508,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MEDCHANIC APPOINTMENT
+  m_text: MEDCHANIC APPT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a81c701c65f78b448fa79aaa4a29d10, type: 2}
   m_sharedMaterial: {fileID: -4351435839455299, guid: 6a81c701c65f78b448fa79aaa4a29d10, type: 2}
@@ -9595,7 +9615,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 46
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1288077984
 MonoBehaviour:
@@ -9802,8 +9822,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1455699931
+  m_SortingLayer: 3
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 8a778985b8af74644ae79b35ecb2e233, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9824,12 +9844,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307456648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3774, y: -0.78, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.173504, y: 2.173504, z: 2.173504}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2054148278}
-  - {fileID: 254215874}
   m_Father: {fileID: 1526881963}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9909,7 +9928,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1319902365
 MonoBehaviour:
@@ -9956,7 +9975,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 31
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1323539703
 MonoBehaviour:
@@ -10230,7 +10249,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 32
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1333592627
 MonoBehaviour:
@@ -10328,7 +10347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.33, y: 1.35}
+  m_AnchoredPosition: {x: 0.175, y: 1.5}
   m_SizeDelta: {x: 1.3065, y: 0.2449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1361177805
@@ -10455,7 +10474,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 65
+  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1366548547
 MonoBehaviour:
@@ -10502,7 +10521,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1371465516
 MonoBehaviour:
@@ -10517,8 +10536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: TOAST1
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: YOU BURN YOUR TOAST A BIT WHEN MAKING BREAKFAST.
 --- !u!1 &1381264508
 GameObject:
   m_ObjectHideFlags: 0
@@ -10770,7 +10788,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 42
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1407337440
 MonoBehaviour:
@@ -10918,7 +10936,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: 0}
+  m_Offset: {x: 0.07873412, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10929,7 +10947,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26, y: 5}
+  m_Size: {x: 0.24253173, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &1419735377
 SpriteRenderer:
@@ -11026,7 +11044,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 73
+  m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1428126319
 MonoBehaviour:
@@ -11118,7 +11136,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 44
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1454184619
 MonoBehaviour:
@@ -11165,7 +11183,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 28
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1463374562
 MonoBehaviour:
@@ -11212,7 +11230,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 40
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1470103579
 MonoBehaviour:
@@ -11227,7 +11245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: MIDTERM2
-  memDescription: "PROF: \u201CThis nuerolinks lecture might be important for the
+  memDescription: "PROF: \u201CThis neurolinks lecture might be important for the
     midterm. Wink, wink.\u201D SHE SAID THE WINKING PART OUT LOUD."
 --- !u!1 &1485736131
 GameObject:
@@ -11394,7 +11412,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 33
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1491795690
 MonoBehaviour:
@@ -11538,7 +11556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.5, y: 4}
+  m_AnchoredPosition: {x: 26.5, y: 3.4}
   m_SizeDelta: {x: 48, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517147321
@@ -11742,7 +11760,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CLASS PRESENTATION
+  m_text: 'CLASS
+
+    PRESENTATION'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a81c701c65f78b448fa79aaa4a29d10, type: 2}
   m_sharedMaterial: {fileID: -4351435839455299, guid: 6a81c701c65f78b448fa79aaa4a29d10, type: 2}
@@ -11849,6 +11869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1307456648}
+  sc: {fileID: 0}
 --- !u!4 &1526881963
 Transform:
   m_ObjectHideFlags: 0
@@ -11857,7 +11878,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526881961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.31, y: 0.86, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11959,7 +11980,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: 0}
+  m_Offset: {x: 0.078734115, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11970,7 +11991,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26, y: 5}
+  m_Size: {x: 0.24253175, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &1540549801
 SpriteRenderer:
@@ -12159,7 +12180,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 36
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1551462197
 MonoBehaviour:
@@ -12224,7 +12245,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: 0}
+  m_Offset: {x: 0.078734115, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12235,7 +12256,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26, y: 5}
+  m_Size: {x: 0.24253175, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &1552690453
 SpriteRenderer:
@@ -12514,7 +12535,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 84
+  m_RootOrder: 82
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1564577971
 MonoBehaviour:
@@ -12561,6 +12582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 714942941}
+  sc: {fileID: 171401641}
 --- !u!4 &1567002148
 Transform:
   m_ObjectHideFlags: 0
@@ -12607,7 +12629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c4fdc6cb1b1ab4c8f2e94491a08f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 0.5
+  interval: 0.8
 --- !u!212 &1578492490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12705,7 +12727,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 61
+  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1588512478
 MonoBehaviour:
@@ -12884,7 +12906,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 103
+  m_RootOrder: 102
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1632235176
 MonoBehaviour:
@@ -12931,7 +12953,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 50
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1638417049
 MonoBehaviour:
@@ -12977,7 +12999,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 66
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1640141288
 MonoBehaviour:
@@ -13023,7 +13045,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 60
+  m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1673208512
 MonoBehaviour:
@@ -13146,7 +13168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696716116}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.16, y: -1.62, z: 0}
+  m_LocalPosition: {x: 1.16, y: -2.08, z: 0}
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13203,12 +13225,9 @@ MonoBehaviour:
   - value: -2
     statusString: "YOU CAN\u2019T REMEMBER WHAT YOUR APPOINTMENT IS FOR. YOU LEAVE
       WITH SQUEAKY KNEES AND FAULTY BIOCIRCUITRY."
-  - value: -1
-    statusString: THE MEDCHANIC GIVES YOU A PRESCRIPTION FOR YOUR KNEES. YOUR NEURAL
-      INTERFACE TELLS YOU A TREE IS BROCCOLI ON THE WAY HOME.
   - value: 1
-    statusString: THE MEDCHANIC SCHEDULES A FOLLOWUP APPOINTMENT TO REPAIR YOUR BIOCIRCUITRY.
-      YOUR KNEES ARE EXTRA SQUEAKY ON THE WAY HOME.
+    statusString: "YOU WENT TO THE MEDCHANIC BUT COULD ONLY REMEMBER ONE OF THE THINGS
+      YOU WANTED TO ASK ABOUT. THE NEXT AVAILABLE APPOINTMENT ISN\u2019T IN MONTHS."
   - value: 2
     statusString: YOU TELL THE MEDCHANIC ABOUT YOUR AILMENTS. YOU GO HOME WITH A
       PRESCRIPTION AND FOLLOW UP APPOINTMENT.
@@ -13564,7 +13583,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 85
+  m_RootOrder: 83
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1743062737
 MonoBehaviour:
@@ -13611,7 +13630,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 68
+  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1758614970
 MonoBehaviour:
@@ -13638,7 +13657,7 @@ GameObject:
   - component: {fileID: 1759068994}
   - component: {fileID: 1759068995}
   m_Layer: 0
-  m_Name: CAFEEHEAR
+  m_Name: CAFEEHEAR5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13657,7 +13676,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 55
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1759068995
 MonoBehaviour:
@@ -13671,7 +13690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c052759e2ab77c64498891674bba816b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memID: CAFEEHEAR
+  memID: CAFEEHEAR5
   memDescription: 'YOU HEAR THE STRANGEST LAUGH AT YOUR FAVORITE COFFEE SHOP. '
 --- !u!1 &1767316083
 GameObject:
@@ -13703,7 +13722,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 67
+  m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1767316085
 MonoBehaviour:
@@ -13750,7 +13769,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1769245695
 MonoBehaviour:
@@ -13797,7 +13816,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 41
+  m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1769354704
 MonoBehaviour:
@@ -13928,7 +13947,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 102
+  m_RootOrder: 101
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1798976648
 MonoBehaviour:
@@ -13974,7 +13993,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 48
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1812384030
 MonoBehaviour:
@@ -14021,7 +14040,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 87
+  m_RootOrder: 85
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1824397198
 MonoBehaviour:
@@ -14159,7 +14178,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 47
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1876543754
 MonoBehaviour:
@@ -14252,7 +14271,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 20
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1877905217
 MonoBehaviour:
@@ -14307,7 +14326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.012, y: -4.2}
+  m_AnchoredPosition: {x: -0.012, y: -4.79}
   m_SizeDelta: {x: 1067.5001, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880456435
@@ -14426,8 +14445,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1455699931
+  m_SortingLayer: 3
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 94b6115b693a9294fae9677dc6506d46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14448,12 +14467,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885039374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3774, y: -0.78, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.173504, y: 2.173504, z: 2.173504}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2055859963}
-  - {fileID: 2098295628}
   m_Father: {fileID: 1199406128}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14487,7 +14505,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 29
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1886566999
 MonoBehaviour:
@@ -14668,7 +14686,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 80
+  m_RootOrder: 105
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1913001355
 MonoBehaviour:
@@ -14715,7 +14733,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1926888824
 MonoBehaviour:
@@ -14730,8 +14748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: SQUIRREL1
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: YOU WATCH A SQUIRREL SCAMPER UP A TREE.
 --- !u!1 &1945775390
 GameObject:
   m_ObjectHideFlags: 0
@@ -14808,7 +14825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c4fdc6cb1b1ab4c8f2e94491a08f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 0.5
+  interval: 0.8
 --- !u!212 &1946629489
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14952,7 +14969,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 83
+  m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1950887271
 MonoBehaviour:
@@ -15045,7 +15062,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1953468433
 MonoBehaviour:
@@ -15091,7 +15108,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 74
+  m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1955591829
 MonoBehaviour:
@@ -15184,7 +15201,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1973152539
 MonoBehaviour:
@@ -15199,8 +15216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: CAFESEE2
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: 'YOU SEE A WOMAN WITH A TALKING BIRD ON HER SHOULDER AT YOUR FAVORITE
+    COFFEE SHOP. '
 --- !u!1 &1973321779
 GameObject:
   m_ObjectHideFlags: 0
@@ -15231,7 +15248,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 35
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1973321781
 MonoBehaviour:
@@ -15277,7 +15294,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 21
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1975942905
 MonoBehaviour:
@@ -15390,7 +15407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986251724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.65, y: -2.1, z: 0}
+  m_LocalPosition: {x: -9.65, y: -2.041, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15538,12 +15555,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 254215874}
-  m_RootOrder: 0
+  m_Father: {fileID: 2054148278}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.34, y: 1.05}
+  m_AnchoredPosition: {x: 0.175, y: 1.2}
   m_SizeDelta: {x: 1.3065, y: 0.2449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009681100
@@ -15565,7 +15582,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
@@ -15575,7 +15592,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 0002c06df1beb4340afba9fa25f56424, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -15622,7 +15639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6ed2678f71c6c344b205b2d7e49ce15, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7475484f18c8c89409824265e52fd884, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15670,7 +15687,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 105
+  m_RootOrder: 104
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2013636315
 MonoBehaviour:
@@ -15687,6 +15704,117 @@ MonoBehaviour:
   memID: FALSEFACTS
   memDescription: "ELLIS: \u201CDid you know that you can see northern lights in
     San Diego?\u201D THIS IS FALSE. YOU CAN\u2019T."
+--- !u!1 &2018593673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2018593675}
+  - component: {fileID: 2018593674}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2018593674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018593673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccfe1c093d4f6e46be6d017a0c957ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: bgm
+    clip: {fileID: 8300000, guid: 65e71b45ed8e8ec4a9d997daab97f02c, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: click
+    clip: {fileID: 8300000, guid: e7e55c500033de449a9cad45b6efea44, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: drop
+    clip: {fileID: 8300000, guid: b74bea867fed3a941a72756a59cfb4fa, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: delete
+    clip: {fileID: 8300000, guid: ac0e64b03aa607548872ddede3512bb2, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: memory
+    clip: {fileID: 8300000, guid: 3cf05190cc3fd954bb86c9398a536801, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: popdefault
+    clip: {fileID: 8300000, guid: 80715eeb59d8dd34591cb6212168a10c, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: poperror
+    clip: {fileID: 8300000, guid: e7f163901b95732419b32ce3bf356061, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: dialup
+    clip: {fileID: 8300000, guid: 0e03057d6f3854148aa77fbc049a6ad2, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: newmemory
+    clip: {fileID: 8300000, guid: 54632355f41ad164fadfb73aeefbca5e, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: badending
+    clip: {fileID: 8300000, guid: d4198147db9656f449dcde823976b65c, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: goodending
+    clip: {fileID: 8300000, guid: 72135e0eb2269554a9976a4f46cf0dd8, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+--- !u!4 &2018593675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018593673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6084273, y: 0.22504498, z: 0.07378606}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2028856675
 GameObject:
   m_ObjectHideFlags: 0
@@ -15811,12 +15939,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2098295628}
-  m_RootOrder: 0
+  m_Father: {fileID: 2055859963}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.34, y: 1.05}
+  m_AnchoredPosition: {x: 0.175, y: 1.2}
   m_SizeDelta: {x: 1.3065, y: 0.2449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038431403
@@ -15838,7 +15966,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
@@ -15848,7 +15976,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 0002c06df1beb4340afba9fa25f56424, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -15895,7 +16023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6ed2678f71c6c344b205b2d7e49ce15, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7475484f18c8c89409824265e52fd884, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16044,7 +16172,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 63
+  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2049119183
 MonoBehaviour:
@@ -16091,7 +16219,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 26
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2051523068
 MonoBehaviour:
@@ -16138,7 +16266,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 94
+  m_RootOrder: 93
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2052010953
 MonoBehaviour:
@@ -16187,6 +16315,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1184491163}
+  - {fileID: 2009681099}
   m_Father: {fileID: 1307456650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16253,7 +16382,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1455699931
   m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &2055859962
@@ -16288,6 +16417,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1361177804}
+  - {fileID: 2038431402}
   m_Father: {fileID: 1885039376}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16354,7 +16484,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1455699931
   m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &2058457261
@@ -16387,7 +16517,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 23
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2058457263
 MonoBehaviour:
@@ -16480,7 +16610,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 43
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2077418080
 MonoBehaviour:
@@ -16589,8 +16719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: WATCHEDBORING4
-  memDescription: "A NEW TREND CALLED \u201CBLORKING YOUR FUNKCHIP\u2019 IS CROPPING
-    UP ON YOUR SOCIAL FEEDS. YOU CAN\u2019T FIGURE OUT WHAT IT MEANS."
+  memDescription: "YOU WATCH \u2018TOO WARM TO HANDLE\u2019 TODAY. IT\u2019S BORING. "
 --- !u!1 &2096710525
 GameObject:
   m_ObjectHideFlags: 0
@@ -16619,56 +16748,55 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1769245694}
-  - {fileID: 13432245}
-  - {fileID: 490345632}
   - {fileID: 598481108}
   - {fileID: 1319902364}
   - {fileID: 155108365}
   - {fileID: 875675058}
   - {fileID: 335387969}
   - {fileID: 1371465515}
+  - {fileID: 1769245694}
   - {fileID: 1926888823}
   - {fileID: 677507400}
   - {fileID: 42471725}
   - {fileID: 872609992}
   - {fileID: 481876823}
+  - {fileID: 490345632}
   - {fileID: 1973152538}
   - {fileID: 975274921}
+  - {fileID: 13432245}
   - {fileID: 881037877}
   - {fileID: 954868761}
   - {fileID: 2087088768}
   - {fileID: 36803496}
-  - {fileID: 1877905216}
-  - {fileID: 1975942904}
-  - {fileID: 582029937}
-  - {fileID: 2058457262}
-  - {fileID: 520252662}
   - {fileID: 990693538}
   - {fileID: 2051523067}
   - {fileID: 99576007}
+  - {fileID: 1877905216}
   - {fileID: 1463374561}
   - {fileID: 1886566998}
   - {fileID: 2137003760}
   - {fileID: 1323539702}
   - {fileID: 1333592626}
+  - {fileID: 582029937}
   - {fileID: 1491795689}
   - {fileID: 2113509736}
   - {fileID: 1973321780}
+  - {fileID: 2058457262}
   - {fileID: 1551462196}
   - {fileID: 205860463}
+  - {fileID: 1975942904}
   - {fileID: 1953468432}
+  - {fileID: 520252662}
   - {fileID: 1432322598}
-  - {fileID: 1470103578}
-  - {fileID: 1769354703}
-  - {fileID: 1407337439}
   - {fileID: 2077418079}
   - {fileID: 1454184618}
   - {fileID: 256632058}
   - {fileID: 1288077983}
+  - {fileID: 1407337439}
   - {fileID: 1876543753}
   - {fileID: 1812384029}
   - {fileID: 1094730191}
+  - {fileID: 1470103578}
   - {fileID: 1638417048}
   - {fileID: 873920838}
   - {fileID: 376927106}
@@ -16676,11 +16804,10 @@ Transform:
   - {fileID: 173798935}
   - {fileID: 1759068994}
   - {fileID: 949279006}
+  - {fileID: 1769354703}
   - {fileID: 1514869987}
   - {fileID: 1101297813}
   - {fileID: 261877967}
-  - {fileID: 1673208511}
-  - {fileID: 1588512477}
   - {fileID: 482751121}
   - {fileID: 2049119182}
   - {fileID: 737546307}
@@ -16688,6 +16815,7 @@ Transform:
   - {fileID: 1640141287}
   - {fileID: 1767316084}
   - {fileID: 1758614969}
+  - {fileID: 1588512477}
   - {fileID: 589460596}
   - {fileID: 230730677}
   - {fileID: 116457112}
@@ -16695,12 +16823,11 @@ Transform:
   - {fileID: 1428126318}
   - {fileID: 1955591828}
   - {fileID: 390157516}
+  - {fileID: 1673208511}
   - {fileID: 1194409299}
   - {fileID: 1538216925}
   - {fileID: 1686169022}
   - {fileID: 497660223}
-  - {fileID: 1913001354}
-  - {fileID: 1033547660}
   - {fileID: 358107798}
   - {fileID: 1950887270}
   - {fileID: 1564577970}
@@ -16712,6 +16839,7 @@ Transform:
   - {fileID: 1024036329}
   - {fileID: 1054560512}
   - {fileID: 1130355111}
+  - {fileID: 1033547660}
   - {fileID: 469927254}
   - {fileID: 2052010952}
   - {fileID: 616245323}
@@ -16725,6 +16853,7 @@ Transform:
   - {fileID: 1632235175}
   - {fileID: 855332132}
   - {fileID: 2013636314}
+  - {fileID: 1913001354}
   - {fileID: 1521873485}
   - {fileID: 806802404}
   - {fileID: 1947887367}
@@ -16762,107 +16891,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2098295627
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2098295628}
-  - component: {fileID: 2098295631}
-  - component: {fileID: 2098295630}
-  - component: {fileID: 2098295629}
-  m_Layer: 5
-  m_Name: Canvas (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2098295628
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098295627}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2038431402}
-  m_Father: {fileID: 1885039376}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.7651, y: -2.2582}
-  m_SizeDelta: {x: 18.4756, y: 9.6766}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2098295629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098295627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &2098295630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098295627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
---- !u!223 &2098295631
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098295627}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 5
-  m_TargetDisplay: 0
 --- !u!1 &2113509735
 GameObject:
   m_ObjectHideFlags: 0
@@ -16893,7 +16921,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 34
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2113509737
 MonoBehaviour:
@@ -16947,7 +16975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.012, y: -4.2}
+  m_AnchoredPosition: {x: -0.012, y: -4.7}
   m_SizeDelta: {x: 1067.5001, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124231400
@@ -17041,7 +17069,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2096710526}
-  m_RootOrder: 30
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2137003761
 MonoBehaviour:
@@ -17056,7 +17084,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: BADTA
-  memDescription: "YOU ASK THE TA TO EXPLAIN THE HOMEWORK TO YOU, THEY DON\u2019T"
+  memDescription: "YOU ASK THE TA TO EXPLAIN THE HOMEWORK TO YOU, THEY SAY THEY DON\u2019T
+    UNDERSTAND THE HOMEWORK EITHER."
 --- !u!1001 &5041683534411222341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17064,6 +17093,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1998372476626983754, guid: 666e25116ec49e2409012ed3f684b64f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5041683533276183384, guid: 666e25116ec49e2409012ed3f684b64f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -17113,6 +17146,10 @@ PrefabInstance:
       value: Memory
       objectReference: {fileID: 0}
     - target: {fileID: 5041683533276183388, guid: 666e25116ec49e2409012ed3f684b64f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041683534147709998, guid: 666e25116ec49e2409012ed3f684b64f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

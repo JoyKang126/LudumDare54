@@ -8,6 +8,13 @@ public class StartButton : MonoBehaviour
     public void StartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Intro");
+        FindObjectOfType<AudioManager>().Play("click");
+        SceneManager.LoadScene("Intro1");
+    }
+
+    public void StartTutorial()
+    {
+        FindObjectOfType<AudioManager>().Play("click");
+        SceneManager.LoadScene("Tutorial");
     }
 }

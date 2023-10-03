@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,13 +10,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float happinessmeter;
     [SerializeField] private LevelInfo levelInfo;
     [SerializeField] private TMP_Text queueTimer;
-    [SerializeField] private SnapController snapControl;
+    [SerializeField] public SnapController snapControl;
     [SerializeField] public List<MemoryBlock> queueSpaces;
     [SerializeField] public List<MemoryBlock> memSpaces;
     [SerializeField] public TMP_Text statusField;
     [SerializeField] public MeterTick academicsMeter;
     [SerializeField] public MeterTick happyMeter;
-     [SerializeField] public Portrait portrait;
+    [SerializeField] public Portrait portrait;
+
+    [SerializeField] private GameObject performanceError;
+    [SerializeField] private GameObject queueError;
     
     private float timer = 3;
     //private gameObject heldMem;
@@ -26,6 +30,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("bgm");
         happinessmeter = 0;
         academicsmeter = 0;
     }
@@ -40,7 +45,7 @@ public class GameManager : MonoBehaviour
         if(academicsmeter < -4 || happinessmeter < -4)
         {
             //trigger endstate
-            endGame();
+            endGamePerformance();
         }
 
         if (timer > 0)
@@ -72,6 +77,7 @@ public class GameManager : MonoBehaviour
                 if (selected != null)
                 {
                     //create a new memory block at the spot found above
+                    FindObjectOfType<AudioManager>().Play("newmemory");
                     GameObject mem = Instantiate (memPrefab, pos, Quaternion.identity);
                     mem.GetComponent<Memory>().snappedTo = selected;
                     selected.heldMem = mem.GetComponent<Memory>();
@@ -84,7 +90,7 @@ public class GameManager : MonoBehaviour
                 {
                     //queue is full
                     //trigger end game state
-                    endGame();
+                    endGameQueue();
                 }
                 
             }
@@ -95,12 +101,18 @@ public class GameManager : MonoBehaviour
 
     public void updateHappiness(float change)
     {
-        happinessmeter += change;
+        if (happinessmeter < 5)
+        {
+            happinessmeter += change;
+        }
     }
 
     public void updateAcademics(float change)
     {
-        academicsmeter += change;
+        if (academicsmeter < 5)
+        {
+            academicsmeter += change;
+        }
     }
 
     public void updateStatusField(string content)
@@ -108,8 +120,39 @@ public class GameManager : MonoBehaviour
         statusField.text = content;
     }
 
+    public void endGamePerformance() {
+        // implement endgame, load end game screen
+        FindObjectOfType<AudioManager>().Play("poperror");
+        FindObjectOfType<AudioManager>().StopPlay("bgm");
+        performanceError.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void endGameQueue() {
+        // implement endgame, load end game screen
+        FindObjectOfType<AudioManager>().Play("poperror");
+        FindObjectOfType<AudioManager>().StopPlay("bgm");
+        queueError.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
     public void endGame() {
-        // implement endgame
-        Debug.Log("end game");
+        // implement endgame, load end game screen
+        float score = happinessmeter + academicsmeter;
+        if (score < -2f)
+        {
+            FindObjectOfType<AudioManager>().StopPlay("bgm");
+            SceneManager.LoadScene("BadEnding");
+        }
+        else if (score > 4f)
+        {
+            FindObjectOfType<AudioManager>().StopPlay("bgm");
+            SceneManager.LoadScene("GoodEnding");
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().StopPlay("bgm");
+            SceneManager.LoadScene("NeutralEnding");
+        }
     }
 }
