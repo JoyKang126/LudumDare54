@@ -44,6 +44,7 @@ public class PauseMenu : MonoBehaviour
     public void BackToStart()
     {
         FindObjectOfType<AudioManager>().Play("click");
+        FindObjectOfType<AudioManager>().StopPlay("bgm");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Start");
     }
@@ -51,6 +52,7 @@ public class PauseMenu : MonoBehaviour
     public void GoToTutorial() {
         Time.timeScale = 1f;
         FindObjectOfType<AudioManager>().Play("click");
+        FindObjectOfType<AudioManager>().StopPlay("bgm");
         SceneManager.LoadScene("Tutorial");
     }
 
