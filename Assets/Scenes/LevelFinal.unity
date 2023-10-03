@@ -15772,7 +15772,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: poperror
     clip: {fileID: 8300000, guid: e7f163901b95732419b32ce3bf356061, type: 3}
-    volume: 0.3
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}

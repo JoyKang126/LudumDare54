@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         academicsMeter.updateMeter(academicsmeter);
         happyMeter.updateMeter(happinessmeter);
 
-        if(academicsmeter < -4 || happinessmeter < -4)
+        if((academicsmeter < -4 || happinessmeter < -4) && Time.timeScale > 0f)
         {
             //trigger endstate
             endGamePerformance();
