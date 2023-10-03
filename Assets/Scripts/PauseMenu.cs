@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] private SnapController sc;
 
     public void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            Debug.Log("escape pressed");
             if (pauseMenu.activeSelf) {
                 Resume();
             }
@@ -31,6 +31,14 @@ public class PauseMenu : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("click");
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        foreach (Memory mem in sc.draggableObjects)
+        {
+            if (mem.isDragged)
+            {
+                mem.recoverAfterPause();
+                break;
+            }
+        }
     }
 
     public void BackToStart()

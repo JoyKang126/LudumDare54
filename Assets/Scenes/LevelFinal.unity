@@ -489,7 +489,7 @@ MonoBehaviour:
     statusString: YOU WENT GROCERY SHOPPING BUT CAME HOME AND REALIZED YOU FORGOT
       SOMETHING. YOU'RE FRUSTRATED WITH YOURSELF.
   - value: 2
-    statusString: YOU BUY NUERAGEL AND RICE ON THE WAY HOME. YOURE HEADACHE GOES
+    statusString: YOU BUY NEURAGEL AND RICE ON THE WAY HOME. YOURE HEADACHE GOES
       AWAY AND YOU HAVE SOMETHING TO EAT TODAY.
 --- !u!212 &30299602
 SpriteRenderer:
@@ -1418,7 +1418,6 @@ MonoBehaviour:
   - {fileID: 632704446}
   draggableObjects:
   - {fileID: 1280882203}
-  snapRange: 0.4
 --- !u!4 &171401642
 Transform:
   m_ObjectHideFlags: 0
@@ -3591,7 +3590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: SHOPERRAND1
-  memDescription: "YOU\u2019RE RUNNING LOW ON NUERAGEL. SPOT MARKET SHOULD HAVE SOME."
+  memDescription: "YOU\u2019RE RUNNING LOW ON NEURAGEL. SPOT MARKET SHOULD HAVE SOME."
 --- !u!1 &492283082
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,8 +4481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: JOBFAIR
-  memDescription: "YOU REVIEW YOUR RESUME AND ALL IT HAS IS SBHS GRADUATE AND  PROFESSIONAL
-    SHREDDER. THIS WON\u2019T DO."
+  memDescription: "YOU REVIEW YOUR RESUME WITH A CAREER COUNSELOUR. YOU REALIZE ALL
+    IT HAS IS \u201CHIGH SCHOOL GRAD\u201D AND \u201CANIME HISTORIAN\u201D. THIS
+    WON\u2019T DO."
 --- !u!1 &616245322
 GameObject:
   m_ObjectHideFlags: 0
@@ -5504,7 +5504,7 @@ MonoBehaviour:
     statusString: YOUR SECOND DATE WITH NOEL GOES WELL ENOUGH.
   - value: 2
     statusString: YOU SURPRISE NOEL BY BRINGING THEM TO AN AUTHENTIC SUSHI BURRITO
-      JOINT. YOU CHEW QUIETLY AS THEY TALK. THEY REACH HOLD YOUR HAND THE WAY HOME.
+      JOINT. YOU CHEW QUIETLY AS THEY TALK. THEY HOLD YOUR HAND ON THE WAY HOME.
 --- !u!212 &773829060
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8972,6 +8972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1885039374}
+  sc: {fileID: 0}
 --- !u!4 &1199406128
 Transform:
   m_ObjectHideFlags: 0
@@ -11244,7 +11245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memID: MIDTERM2
-  memDescription: "PROF: \u201CThis nuerolinks lecture might be important for the
+  memDescription: "PROF: \u201CThis neurolinks lecture might be important for the
     midterm. Wink, wink.\u201D SHE SAID THE WINKING PART OUT LOUD."
 --- !u!1 &1485736131
 GameObject:
@@ -11868,6 +11869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1307456648}
+  sc: {fileID: 0}
 --- !u!4 &1526881963
 Transform:
   m_ObjectHideFlags: 0
@@ -12580,6 +12582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 714942941}
+  sc: {fileID: 171401641}
 --- !u!4 &1567002148
 Transform:
   m_ObjectHideFlags: 0

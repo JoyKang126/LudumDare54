@@ -45,7 +45,6 @@ public class Event : MonoBehaviour
                     foreach (string req in this.requirements) {
                         if (req == mem_id) {
                             found++;
-                            mem.transform.GetChild(2).gameObject.SetActive(true);
                             break;
                         }
                     }
@@ -54,17 +53,13 @@ public class Event : MonoBehaviour
                     break;
                 }  
             }
-            foreach (MemoryBlock mb in gm.queueSpaces)
+            foreach (Memory mem in gm.snapControl.draggableObjects)
             {
-                if (mb.isOccupied)
-                {
-                    Memory mem = mb.heldMem;
-                    string mem_id = mem.memID;
-                    foreach (string req in this.requirements) {
-                        if (req == mem_id) {
-                            mem.transform.GetChild(2).gameObject.SetActive(true);
-                            break;
-                        }
+                string mem_id = mem.memID;
+                foreach (string req in this.requirements) {
+                    if (req == mem_id) {
+                        mem.transform.GetChild(2).gameObject.SetActive(true);
+                        break;
                     }
                 }
             }

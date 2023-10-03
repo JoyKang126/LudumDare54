@@ -14,7 +14,7 @@ public class Memory : MonoBehaviour
 
     public string memID;
     public string memDesc;
-    private bool isDragged = false;
+    public bool isDragged = false;
     private bool clicked;
     private Vector3 mouseDragStartPosition;
     private Vector3 spriteDragStartPosition;
@@ -60,9 +60,9 @@ public class Memory : MonoBehaviour
             if (snappedTo != null)
             {
                 snappedToLast = snappedTo;
-                snappedTo.heldMem = null;
+                //snappedTo.heldMem = null;
                 //snappedTo.isOccupied = false;
-                snappedTo = null;
+                //snappedTo = null;
             } 
         }
     }
@@ -111,4 +111,25 @@ public class Memory : MonoBehaviour
             }
     }
 
+    public void recoverAfterPause()
+    {
+        isDragged = false;
+        gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
+        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
+        transform.GetChild(1).gameObject.GetComponent<Canvas>().sortingLayerName = "notdrag";
+        transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "notdrag";
+
+        transform.position = lastPosition;
+
+        if (snappedToLast != null)
+        {
+            snappedTo = snappedToLast;
+            snappedTo.isOccupied = true;
+            snappedTo.heldMem = this;
+            snappedToLast = null;
+        }
+    }
+
 }
+
+

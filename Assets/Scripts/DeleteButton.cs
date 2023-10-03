@@ -9,7 +9,7 @@ public class DeleteButton : MonoBehaviour
         if(Time.timeScale > 0f)
         {
             if (transform.parent.gameObject.GetComponent<Memory>().snappedTo != null)
-            transform.parent.gameObject.GetComponent<Memory>().snappedTo.isOccupied = false;
+                transform.parent.gameObject.GetComponent<Memory>().snappedTo.isOccupied = false;
             FindObjectOfType<AudioManager>().Play("delete");
             Destroy(transform.parent.gameObject);
         }

@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float happinessmeter;
     [SerializeField] private LevelInfo levelInfo;
     [SerializeField] private TMP_Text queueTimer;
-    [SerializeField] private SnapController snapControl;
+    [SerializeField] public SnapController snapControl;
     [SerializeField] public List<MemoryBlock> queueSpaces;
     [SerializeField] public List<MemoryBlock> memSpaces;
     [SerializeField] public TMP_Text statusField;
